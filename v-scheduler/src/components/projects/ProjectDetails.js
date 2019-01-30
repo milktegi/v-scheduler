@@ -1,6 +1,9 @@
 import React from 'react'
 
-const ProjectDetails = () => {
+const ProjectDetails = ( props) => {
+
+	const id = props.match.params.id;
+
 	return (
 		<div className="container section project-details">
 			<div className="card z-depth-0">
@@ -8,7 +11,7 @@ const ProjectDetails = () => {
 					<span className="card-title">
 						일정 이름
 					</span>
-					<p>우연일까 하얀 얼굴 어딘가</p>
+					<p>우연일까 하얀 얼굴 어딘가 {id}</p>
 				</div>
 				<div className="card-action grey-lighten-4 grey-text">
 					<div>milktegi님이 등록함</div>

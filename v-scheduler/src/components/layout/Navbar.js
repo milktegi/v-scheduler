@@ -5,7 +5,7 @@ import SignedOutLinks from './SignedOutLinks';
 
 const Navbar = () => {
   return (
-    <nav className="nav-wrapper indigo darken-8">
+    <nav className="nav-wrapper grey darken-4">
       <div className="container">
         <Link to="/" className="brand-logo sm left">
           v-scheduler
