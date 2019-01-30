@@ -19,27 +19,17 @@ export const signIn = credentials => {
   };
 };
 
-<<<<<<< HEAD
-export const signOut = () => {
-  return(dispatch, getState, { getFirebase}) => {
-    const firebase = getFirebase();
 
-    firebase.auth().signOut()
-    .then(()=> {
-=======
 
 export const signOut = () => {
   return(dispatch, getState, { getFirebase}) => {
     const firebase = getFirebase();
     firebase.auth().signOut().then(()=> {
->>>>>>> step12-auth3
+
       dispatch({
         type: 'SIGNOUT_SUCCESS'
       })
     })
   }
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> step12-auth3

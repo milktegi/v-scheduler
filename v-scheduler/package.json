@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
+
     "firebase": "^5.7.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -13,17 +13,7 @@
     "react-scripts": "1.1.5",
     "redux": "^4.0.1",
     "redux-firestore": "^0.5.7",
-=======
-    "firebase": "^5.8.1",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-redux": "^6.0.0",
-    "react-redux-firebase": "^2.2.6",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
-    "redux": "^4.0.1",
-    "redux-firestore": "^0.6.3",
->>>>>>> 6c883bd7086fcae0b95f5235b919d58c38940eab
+
     "redux-thunk": "^2.3.0"
   },
   "scripts": {

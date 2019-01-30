@@ -9,41 +9,19 @@ import { Provider } from 'react-redux';
 
 import thunk from 'redux-thunk';
 
-<<<<<<< HEAD
-// firestore
-import { reduxFirestore, getFirestore } from 'redux-firestore';
-import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
-
-// connect config
-import fbConfig from './config/firebaseconfig';
-=======
 //firebase
 
 import { reduxFirestore, getFirestore } from 'redux-firestore';
 import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
-import firebaseConfig from './config/firebaseConfig';
->>>>>>> 6c883bd7086fcae0b95f5235b919d58c38940eab
+import fbConfig from './config/firebaseconfig';
 
 const store = createStore(
   rootReducer,
   compose(
-<<<<<<< HEAD
-<<<<<<< HEAD
-    applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore
-      })
-    ),
-    reduxFirestore(fbConfig),
-    reactReduxFirebase(fbConfig)
-=======
-    applyMiddleware(thunk.withExtraArgument(getFirebase, getFirestore)),
-    reduxFirestore(firebaseConfig),
-    reactReduxFirebase(firebaseConfig)
->>>>>>> 6c883bd7086fcae0b95f5235b919d58c38940eab
-=======
     applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
     reduxFirestore(fbConfig),
     reactReduxFirebase(fbConfig, { attachAuthIsReady: true })
->>>>>>> step12-auth3
+
   )
 );
 
