@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 // 액션 크리에이터를 임포트 받음
 import { createProject } from '../../store/actions/projectAction';
 
+import { Redirect } from 'react-router-dom';
+
 class CreateProject extends Component {
   state = {
     title: '',
@@ -25,6 +27,8 @@ class CreateProject extends Component {
   };
 
   render() {
+        const { auth } = this.props;
+    if(!auth.uid) return <Redirect to="/signin"></Redirect>
     const { handleChange, handleSubmit } = this;
 
     return (
@@ -66,6 +70,13 @@ class CreateProject extends Component {
 //dispatch를 호출하고
 //이 dispatch는 액션 크리에이터를 호출하고
 //해당 project를 보내줌  
+const mapStateToProps = state => {
+
+  return {
+
+    auth: state.firebase.auth
+  };
+};
 
 const mapDispatchToProps = dispatch => {
 	return {
@@ -75,4 +86,4 @@ const mapDispatchToProps = dispatch => {
 	}
 }
 
-export default connect(null, mapDispatchToProps)(CreateProject);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateProject);
