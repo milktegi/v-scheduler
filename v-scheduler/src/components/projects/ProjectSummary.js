@@ -7,8 +7,10 @@ const ProjectSummary = ({ project }) => {
 				<div className="card-content grey-text text-darken-3">
 					<span className="card-title">
 						{project.title}
+						 
 					</span>
-					<p>milktegi님이 등록하였음</p>
+					 <p>{project.content}</p>
+					<p>{project.author}님이 등록하였음</p>
 					<p className="grey-text">2019-01-30</p>
 				</div>
 			</div>

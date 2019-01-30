@@ -18,7 +18,7 @@ const ProjectDetails = props => {
             <p>{project.content}</p>
           </div>
           <div className="card-action grey-lighten-4 grey-text">
-            <div>milktegi님이 {project.author}</div>
+            <div>{project.author}님이 등록하였음</div>
             <div>01.30 6:00 </div>
           </div>
         </div>

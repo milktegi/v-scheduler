@@ -12,15 +12,15 @@ export const createProject = project => {
 		 // 데이터베이스(서버)에 비동기 요청
 
     const firestore = getFirestore();
+    const profile = getState().firebase.profile;
+    const authorId = getState().firebase.auth.uid;
     firestore
       .collection('projects')
       .add({
         ...project,
 
-        author: '김개발',
-        authorId: 'testest',
-
-
+        author: profile.firstName,
+        authorId,
         createAt: new Date()
       })
       .then(() => {

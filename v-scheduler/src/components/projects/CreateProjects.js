@@ -24,6 +24,8 @@ class CreateProject extends Component {
     e.preventDefault();
     // console.log(this.state);
 		this.props.createProject(this.state)
+    // route
+    this.props.history.push('/')
   };
 
   render() {
@@ -54,7 +56,7 @@ class CreateProject extends Component {
             />
           </div>
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">로그인</button>
+            <button className="btn pink lighten-1 z-depth-0">등록하기</button>
           </div>
         </form>
       </div>
