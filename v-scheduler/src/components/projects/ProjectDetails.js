@@ -1,5 +1,5 @@
 import React from 'react';
-
+import moment from 'moment'
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
@@ -19,7 +19,7 @@ const ProjectDetails = props => {
           </div>
           <div className="card-action grey-lighten-4 grey-text">
             <div>{project.author}님이 등록하였음</div>
-            <div>01.30 6:00 </div>
+            <div>	{moment(project.createAt.toDate()).calendar()}</div>
           </div>
         </div>
       </div>
