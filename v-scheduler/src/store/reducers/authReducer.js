@@ -15,8 +15,13 @@ const authReducer = (state = initialState, action) => {
         authError: 'login failed'
       };
 		case 'SIGNOUT_SUCCESS':
+<<<<<<< HEAD
 		console.log('signout success!')
 		return state;
+=======
+      console.log('successfully signedout');
+     return state;
+>>>>>>> step12-auth3
     default:
       return state;
   }
